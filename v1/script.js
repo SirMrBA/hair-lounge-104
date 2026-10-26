@@ -242,19 +242,6 @@ looksTrack.addEventListener('focusin', (event) => {
   scrollTo({ top: top + progress * (looks.offsetHeight - innerHeight), behavior: reduced.matches ? 'auto' : 'smooth' });
 });
 
-/* Marquee: speeds up with scroll velocity and follows the scroll direction */
-const marqueeAnimation = document.querySelector('.marquee-track').getAnimations?.()[0];
-let marqueeBoost = 0;
-let marqueeDirection = 1;
-function updateMarquee(velocity) {
-  if (!marqueeAnimation) return false;
-  if (Math.abs(velocity) > 1) marqueeDirection = Math.sign(velocity);
-  marqueeBoost = Math.max(marqueeBoost * 0.9, Math.min(Math.abs(velocity) * 0.18, 5));
-  if (marqueeBoost < 0.02) marqueeBoost = 0;
-  marqueeAnimation.playbackRate = marqueeDirection * (1 + marqueeBoost);
-  return marqueeBoost > 0;
-}
-
 /* Service preview: a real photo follows the pointer over the price list */
 const preview = document.querySelector('.service-preview');
 const previewImage = preview.querySelector('img');
@@ -305,7 +292,6 @@ magnet.addEventListener('pointerleave', () => { magnet.style.translate = ''; });
 
 /* One frame loop, only running while something moves */
 let ticking = false;
-let lastScroll = scrollY;
 function requestTick() {
   if (ticking) return;
   ticking = true;
@@ -315,15 +301,12 @@ function tick() {
   ticking = false;
   const y = scrollY;
   const vh = innerHeight;
-  const velocity = y - lastScroll;
-  lastScroll = y;
   updateHeader(y);
   updateLooks(vh);
-  let again = updatePreview();
+  const again = updatePreview();
   if (!reduced.matches) {
     updateParallax(vh);
     updateStatement(vh);
-    again = updateMarquee(velocity) || again;
   }
   if (again) requestTick();
 }

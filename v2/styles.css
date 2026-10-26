@@ -49,7 +49,9 @@ a:focus-visible, button:focus-visible, summary:focus-visible, .looks-grid:focus-
 .hero { position: relative; display: grid; grid-template-columns: 50% 50%; max-width: 1800px; margin: auto; }
 .hero-copy { padding: 56px 5% 56px 9.45%; position: relative; z-index: 2; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
 .hero .eyebrow { display: flex; align-items: center; gap: 10px; }
-.small-star { font-size: 24px; color: var(--gold); line-height: 1; }
+.small-star { font-size: 16px; color: var(--gold); line-height: 1; }
+.star { display: block; width: 1em; height: 1em; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; }
+
 .hero h1 { font-size: clamp(84px, 8.3vw, 146px); margin: 30px -90px 26px 0; line-height: .92; position: relative; z-index: 3; }
 .split-title .line { display: block; overflow: hidden; padding: 0 .14em .12em 0; margin-bottom: -.12em; }
 .split-title .line > span { display: block; }
