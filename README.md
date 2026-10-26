@@ -2,11 +2,19 @@
 
 Unabhängiger Website-Entwurf von MakeSimpleIT, erstellt auf Barans Auftrag am 26.10.2026. Keine offizielle Veröffentlichung des Salons. Statisches HTML/CSS/JavaScript, direkt mit GitHub Pages auf `main` im Repository-Root auslieferbar.
 
+## Aufbau
+
+- `/` – Auswahlseite mit beiden Entwürfen.
+- `/v1/` – Version 1: ausführlich und hell, mit Laufband, Fakten-Leiste, fixierter Seitwärts-Galerie und Statement (Stand Commit `b0b6819`).
+- `/v2/` – Version 2: kompakt in fünf Abschnitten, Beige und Braun (Stand Commit `81f94b4`).
+
+Beide Versionen teilen sich `assets/`; Seiten, Styles und Skripte liegen je Version im eigenen Ordner. Die Vorschauleiste jeder Version verlinkt auf die andere.
+
 ## Lokal ansehen
 
 `python3 -m http.server 8765` im Projektordner starten. Keine Build-Abhängigkeiten. Pfade sind relativ und unterstützen GitHub Pages Unterverzeichnisse.
 
-## Gestaltung und Funktion
+## Gestaltung und Funktion (Version 2)
 
 Kompakte Seite in fünf Abschnitten: Hero, Looks, Leistungen & Preise, Salon, Kontakt. Warme Palette aus Beige, Espresso- und Cognacbraun mit Karamell als Akzent; originale Wortmarke in Dunkelbraun, Cormorant Garamond und DM Sans lokal. Ausschließlich echte Fotos des Salons, keine KI-generierten Bilder.
 
@@ -23,7 +31,7 @@ Bewegung ohne Bibliotheken (CSS, Web Animations API, IntersectionObserver):
 ## Quellen und Bildrechte
 
 - Inhalte, Preise, Team- und Salonbild `salon-wide`, `lounge`, Logo: https://www.hair-lounge-104.de/ sowie /preise/ und /impressum/, gelesen am 26.10.2026.
-- Looks (`assets/looks/`) und Salonfotos (`assets/salon/`): Instagram-Profil https://www.instagram.com/hairlounge104/, abgerufen am 26.10.2026. Bewusst nur Aufnahmen ohne Gesichter von Kundinnen. Herkunft je Datei: `balayage` CH0jcRNlUp-, `kupfer` CPJQWyNAYr7, `blond` CQbfVXPg6yp, `rotbob` ClOwYL6MI0w, `straehnen` CCLiXYLK9fh, `beach-waves` CCG_52PqCAB, `bob` BQ5CuUPBQzy, `shag` C40wevosaod (6. Bild), `tuerkis` ClmBMwssAcM (3. Bild), `violett` Cpnk206s3v1 (3. Bild), `platin` CqGln4mMv9U, `kupferbraun` CO3Q9IkAAMu, `locken` BTTzPxjhkUv, `pastell` CiQLYiisCMv, `ombre` BTHBSbjhx8u, `blond-balayage` CQoXe0sMHP8, `bar` BS0W6AUhEM3, `raum` BRffMADBElA, `kerzen` Be48CgEh_5h, `wellness` und `kamin` Cq8eaaXMhcy (Beitrags-Kürzel hinter instagram.com/p/). Nicht mehr eingebunden, aber noch im Ordner: `beach-waves`, `platin`, `pastell`, `ombre`, `salon-wide`, `lounge`.
+- Looks (`assets/looks/`) und Salonfotos (`assets/salon/`): Instagram-Profil https://www.instagram.com/hairlounge104/, abgerufen am 26.10.2026. Bewusst nur Aufnahmen ohne Gesichter von Kundinnen. Herkunft je Datei: `balayage` CH0jcRNlUp-, `kupfer` CPJQWyNAYr7, `blond` CQbfVXPg6yp, `rotbob` ClOwYL6MI0w, `straehnen` CCLiXYLK9fh, `beach-waves` CCG_52PqCAB, `bob` BQ5CuUPBQzy, `shag` C40wevosaod (6. Bild), `tuerkis` ClmBMwssAcM (3. Bild), `violett` Cpnk206s3v1 (3. Bild), `platin` CqGln4mMv9U, `kupferbraun` CO3Q9IkAAMu, `locken` BTTzPxjhkUv, `pastell` CiQLYiisCMv, `ombre` BTHBSbjhx8u, `blond-balayage` CQoXe0sMHP8, `bar` BS0W6AUhEM3, `raum` BRffMADBElA, `kerzen` Be48CgEh_5h, `wellness` und `kamin` Cq8eaaXMhcy (Beitrags-Kürzel hinter instagram.com/p/). `beach-waves`, `platin`, `pastell`, `ombre`, `salon-wide` und `lounge` nutzt nur Version 1, `shag`, `tuerkis` und `violett` nur Version 2.
 - Instagram-Rahmen beschnitten. `kupfer`, `rotbob`, `platin`, `kupferbraun`, `locken`, `pastell`, `ombre`, `blond-balayage`, `bar`, `kerzen`, `wellness` und `kamin` mit Higgsfield (`bytedance_image_upscale`, 2K, je 2 Credits) hochskaliert.
 - Loops (`assets/loops/`): echte Fotos `kamin`, `kerzen`, `bar` als Start- und Endbild mit Higgsfield MiniMax H3 (5 s, 2K, stehende Kamera, je 10 Credits) dezent animiert, Jobs `3a0e50cf-646e-4ef5-a39e-6575631a7e66`, `e44bbbf4-c2e4-4393-a29a-ef532059439f`, `dbd44f3a-0d26-42bf-9724-fb9897ded315`. Auf der Seite gekennzeichnet.
 - Salon-Angebote aus Instagram: Wellness-Haarwäsche im Massage-Sessel (Beitrag Cq8eaaXMhcy), Refill-Station (DWeY40KDOp2), Gründung im Januar 2008 (Jubiläumsbeiträge BeNjNK7hVK7 und DFFjOfDsVTC).

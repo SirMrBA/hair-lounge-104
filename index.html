@@ -1,141 +1,66 @@
 <!doctype html>
-<html lang="de" class="no-js">
+<html lang="de">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Hair Lounge 104 — Dein Look. Dein Gefühl. | Designvorschau</title>
-<meta name="description" content="Hair Lounge 104 in Bochum: Balayage, Coloration, Schnitt und Wellness-Haarwäsche seit 2008. Website-Designvorschau von MakeSimpleIT.">
-<meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#f4f0e8">
+<title>Hair Lounge 104 — Designvorschau: zwei Versionen</title>
+<meta name="description" content="Zwei Website-Entwürfe für Hair Lounge 104 in Bochum zum Vergleich. Designvorschau von MakeSimpleIT.">
+<meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#e8dccb">
 <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
-<link rel="preload" href="./assets/cormorant-garamond-normal.ttf" as="font" type="font/ttf" crossorigin>
-<link rel="preload" href="./assets/looks/balayage.webp" as="image">
-<link rel="stylesheet" href="./assets/fonts.css"><link rel="stylesheet" href="./styles.css">
-<script>document.documentElement.classList.replace('no-js', 'js');</script>
-<script src="./script.js" defer></script>
+<link rel="stylesheet" href="./assets/fonts.css">
+<style>
+  :root { --paper: #e8dccb; --ink: #2e2119; --muted: #6c5848; --gold: #8f6a3f; --dark: #3a2a20; --cream: #f5ead9; --line: #cbb9a1; --serif: 'Cormorant Garamond', Georgia, serif; --sans: 'DM Sans', Arial, sans-serif; --ease-out: cubic-bezier(.23, 1, .32, 1); }
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; min-height: 100vh; background: var(--paper); color: var(--ink); font-family: var(--sans); line-height: 1.6; display: flex; flex-direction: column; }
+  a { color: inherit; text-decoration: none; }
+  a:focus-visible { outline: 2px solid var(--gold); outline-offset: 6px; }
+  .logo { width: 180px; aspect-ratio: 500 / 149; background: var(--ink); -webkit-mask: url(./assets/logo.png) center / contain no-repeat; mask: url(./assets/logo.png) center / contain no-repeat; }
+  main { flex: 1; width: min(1180px, 100% - 32px); margin: 0 auto; padding: 56px 0 64px; }
+  .eyebrow { margin: 44px 0 0; font-size: 10px; letter-spacing: .16em; color: var(--muted); }
+  h1 { margin: 14px 0 44px; font-family: var(--serif); font-weight: 400; font-size: clamp(46px, 7vw, 92px); line-height: .98; letter-spacing: -.045em; }
+  h1 em { color: var(--gold); font-weight: 400; }
+  .versions { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  .version { display: block; }
+  .shot { aspect-ratio: 960 / 566; overflow: hidden; background: var(--dark); box-shadow: 0 30px 60px -36px rgba(46, 33, 25, .55); }
+  .shot img { display: block; width: 100%; height: 100%; object-fit: cover; transition: scale 700ms var(--ease-out); }
+  .meta { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-top: 18px; padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+  .meta h2 { margin: 0; font-family: var(--serif); font-weight: 400; font-size: 34px; letter-spacing: -.02em; font-variant-numeric: lining-nums; }
+  .meta span { font-size: 20px; transition: transform 200ms var(--ease-out); }
+  .version p { margin: 12px 0 0; font-size: 14px; color: var(--muted); }
+  footer { padding: 20px 16px 28px; text-align: center; font-size: 11px; color: var(--muted); }
+  footer a { border-bottom: 1px solid currentColor; }
+  @media (hover: hover) and (pointer: fine) {
+    .version:hover .shot img { scale: 1.04; }
+    .version:hover .meta span { transform: translate(3px, -3px); }
+  }
+  @media (max-width: 760px) {
+    main { padding: 36px 0 48px; }
+    .logo { width: 150px; }
+    .eyebrow { margin-top: 32px; }
+    h1 { margin-bottom: 30px; }
+    .versions { grid-template-columns: 1fr; gap: 36px; }
+    .meta h2 { font-size: 30px; }
+  }
+  @media (prefers-reduced-motion: reduce) { .shot img, .meta span { transition: none; } }
+</style>
 </head>
 <body>
-<a class="skip-link" href="#main">Zum Inhalt</a>
-<div class="preview-bar">DESIGNVORSCHAU <span>·</span> Ein neuer Look für Hair Lounge 104 <a href="#entwurf">Über den Entwurf ↗</a></div>
-<header class="site-header">
-  <a class="brand" href="#home" aria-label="Hair Lounge 104 – Startseite"><img src="./assets/logo.png" alt="Hair Lounge 104" width="500" height="149"></a>
-  <button class="menu-toggle" type="button" aria-controls="navigation" aria-expanded="false">Menü <span aria-hidden="true">＋</span></button>
-  <nav id="navigation" aria-label="Hauptnavigation">
-    <a href="#looks">Looks</a><a href="#leistungen">Leistungen & Preise</a><a href="#salon">Salon</a>
-    <a href="#kontakt" class="button button-dark nav-cta">Dein Termin <span aria-hidden="true">↗</span></a>
-  </nav>
-</header>
-
-<main id="main">
-<section class="hero" id="home" aria-labelledby="hero-title">
-  <div class="hero-copy">
-    <p class="eyebrow intro-item"><span class="small-star" aria-hidden="true">✳</span> SEIT 2008 · BOCHUM</p>
-    <h1 id="hero-title" class="split-title"><span class="line"><span>Ein Look.</span></span><span class="line"><span><em>Dein Gefühl.</em></span></span></h1>
-    <p class="hero-description intro-item">Schnitt, Farbe und ein bisschen Auszeit.</p>
-    <a href="#kontakt" class="button button-dark intro-item">Termin vereinbaren <span aria-hidden="true">↗</span></a>
+<main>
+  <div class="logo" role="img" aria-label="Hair Lounge 104"></div>
+  <p class="eyebrow">DESIGNVORSCHAU VON MAKESIMPLEIT</p>
+  <h1>Zwei Entwürfe.<br><em>Ein Salon.</em></h1>
+  <div class="versions">
+    <a class="version" href="./v1/">
+      <div class="shot"><img src="./assets/preview/v1.webp" alt="Startbereich von Version 1" width="960" height="566"></div>
+      <div class="meta"><h2>Version 1</h2><span aria-hidden="true">↗</span></div>
+      <p>Ausführlich, hell, viel Bewegung.</p>
+    </a>
+    <a class="version" href="./v2/">
+      <div class="shot"><img src="./assets/preview/v2.webp" alt="Startbereich von Version 2" width="960" height="566"></div>
+      <div class="meta"><h2>Version 2</h2><span aria-hidden="true">↗</span></div>
+      <p>Kompakt, Beige und Braun, ruhiger.</p>
+    </a>
   </div>
-  <div class="hero-visual" role="group" aria-label="Echte Arbeiten aus der Hair Lounge 104">
-    <figure class="slide is-active" data-name="Balayage"><img src="./assets/looks/balayage.webp" alt="Blonde Balayage mit weichen Locken, Nahaufnahme aus dem Salon" width="1200" height="1500" fetchpriority="high"></figure>
-    <figure class="slide" data-name="Kupfer"><img src="./assets/looks/kupfer.webp" alt="Kupferrote Locken vor der Backsteinwand des Salons" width="1200" height="1500" decoding="async"></figure>
-    <figure class="slide" data-name="Blond"><img src="./assets/looks/blond.webp" alt="Lange, strahlend blonde Wellen von hinten" width="1152" height="1440" decoding="async"></figure>
-    <figure class="slide" data-name="Rot-Bob"><img src="./assets/looks/rotbob.webp" alt="Glatter, kupferroter Bob von der Seite" width="1200" height="1500" decoding="async"></figure>
-    <div class="story-bars" role="group" aria-label="Look auswählen">
-      <button type="button" data-slide="0" aria-pressed="true" aria-label="Look 1: Balayage"><i></i></button>
-      <button type="button" data-slide="1" aria-pressed="false" aria-label="Look 2: Kupfer"><i></i></button>
-      <button type="button" data-slide="2" aria-pressed="false" aria-label="Look 3: Blond"><i></i></button>
-      <button type="button" data-slide="3" aria-pressed="false" aria-label="Look 4: Rot-Bob"><i></i></button>
-    </div>
-    <div class="hero-caption">
-      <p><span>ECHTE ARBEIT</span><b class="look-name">Balayage</b></p>
-      <button type="button" class="look-pause" aria-pressed="false" aria-label="Bildwechsel pausieren"><span aria-hidden="true"></span></button>
-    </div>
-  </div>
-  <a class="hero-stamp" href="#looks" aria-label="Zu den Looks"><svg viewBox="0 0 130 130" aria-hidden="true"><defs><path id="circle" d="M65,65m-48,0a48,48 0 1,1 96,0a48,48 0 1,1 -96,0"/></defs><text><textPath href="#circle" textLength="300">DEIN MOMENT · DEINE HAIR LOUNGE · </textPath></text></svg><span aria-hidden="true">↓</span></a>
-</section>
-
-<section class="looks section-pad" id="looks" aria-labelledby="looks-title">
-  <div class="section-kicker reveal"><span>01 / ECHTE LOOKS</span><a href="https://www.instagram.com/hairlounge104/?hl=de" target="_blank" rel="noopener noreferrer">@hairlounge104 ↗</a></div>
-  <h2 class="reveal" id="looks-title">Echte Arbeiten.<br><em>Echte Lieblingslooks.</em></h2>
-  <div class="looks-grid" tabindex="0" role="region" aria-label="Galerie mit Looks">
-    <figure class="look-card"><div class="look-img reveal-clip"><img src="./assets/looks/straehnen.webp" alt="Dunkelblonde Wellen mit hellen Strähnen" width="900" height="1125" loading="lazy"></div><figcaption>Strähnen & Welle</figcaption></figure>
-    <figure class="look-card"><div class="look-img reveal-clip" style="--d:80ms"><img src="./assets/looks/shag.webp" alt="Lockiger Short Shag von der Seite" width="900" height="1125" loading="lazy"></div><figcaption>Short Shag</figcaption></figure>
-    <figure class="look-card"><div class="look-img reveal-clip" style="--d:160ms"><img src="./assets/looks/bob.webp" alt="Brauner Bob mit Glanz von hinten" width="864" height="1080" loading="lazy"></div><figcaption>Bob</figcaption></figure>
-    <figure class="look-card"><div class="look-img reveal-clip" style="--d:240ms"><img src="./assets/looks/tuerkis.webp" alt="Türkis gefärbte Locken von hinten" width="900" height="1125" loading="lazy"></div><figcaption>Türkis-Locken</figcaption></figure>
-    <figure class="look-card"><div class="look-img reveal-clip"><img src="./assets/looks/kupferbraun.webp" alt="Kupferbraune Locken von hinten" width="900" height="1125" loading="lazy"></div><figcaption>Kupferbraun</figcaption></figure>
-    <figure class="look-card"><div class="look-img reveal-clip" style="--d:80ms"><img src="./assets/looks/locken.webp" alt="Definierte Naturlocken nach dem Styling" width="900" height="1125" loading="lazy"></div><figcaption>Locken</figcaption></figure>
-    <figure class="look-card"><div class="look-img reveal-clip" style="--d:160ms"><img src="./assets/looks/violett.webp" alt="Violetter Bob von hinten" width="900" height="1125" loading="lazy"></div><figcaption>Violett-Bob</figcaption></figure>
-    <figure class="look-card"><div class="look-img reveal-clip" style="--d:240ms"><img src="./assets/looks/blond-balayage.webp" alt="Blonde Balayage mit dunklerem Ansatz" width="900" height="1125" loading="lazy"></div><figcaption>Blond Balayage</figcaption></figure>
-  </div>
-</section>
-
-<section class="services section-pad" id="leistungen" aria-labelledby="services-title">
-  <div class="section-kicker reveal"><span>02 / LEISTUNGEN & PREISE</span></div>
-  <div class="services-grid">
-    <div class="services-heading reveal">
-      <h2 id="services-title">So individuell<br><em>wie du.</em></h2>
-      <p>Zum Öffnen einfach antippen.</p>
-    </div>
-    <div class="price-list reveal">
-      <details open data-preview="./assets/looks/bob.webp"><summary><span class="service-number">01</span><span class="service-name">Cut & Style</span><span class="service-plus" aria-hidden="true">＋</span></summary><div class="price-content"><dl><div><dt>Waschen · Schneiden · Föhnen</dt><dd>ab 55 €</dd></div><div><dt>Schnitt pur · Ladies</dt><dd>45 €</dd></div><div><dt>Föhnen · Styling</dt><dd>ab 35 €</dd></div></dl></div></details>
-      <details data-preview="./assets/looks/balayage.webp"><summary><span class="service-number">02</span><span class="service-name">Color & Balayage</span><span class="service-plus" aria-hidden="true">＋</span></summary><div class="price-content"><dl><div><dt>Ansatzcoloration</dt><dd>ab 50 €</dd></div><div><dt>Globalcoloration</dt><dd>ab 85 €</dd></div><div><dt>Strähnen Oberkopf</dt><dd>ab 89 €</dd></div><div><dt>Ansatzsträhnen komplett</dt><dd>ab 110 €</dd></div><div><dt>Neusträhnen komplett</dt><dd>ab 150 €</dd></div><div><dt>Glossing</dt><dd>ab 55 €</dd></div><div><dt>Balayage · neu oder Auffrischung</dt><dd>auf Anfrage</dd></div></dl></div></details>
-      <details data-preview="./assets/salon/raum.webp"><summary><span class="service-number">03</span><span class="service-name">Gentlemen</span><span class="service-plus" aria-hidden="true">＋</span></summary><div class="price-content"><dl><div><dt>Waschen · Schneiden · Styling · Kopfmassage</dt><dd>35 €</dd></div><div><dt>Schnitt pur</dt><dd>31 €</dd></div><div><dt>Konturenschneiden</dt><dd>18 €</dd></div><div><dt>Maschinenhaarschnitt</dt><dd>19 €</dd></div><div><dt>Bartstutzen</dt><dd>ab 15 €</dd></div><div><dt>Herrentönung</dt><dd>ab 50 €</dd></div><div><dt>Kinderhaarschnitt</dt><dd>ab 27 €</dd></div></dl></div></details>
-      <details data-preview="./assets/salon/wellness.webp"><summary><span class="service-number">04</span><span class="service-name">Care & Beauty</span><span class="service-plus" aria-hidden="true">＋</span></summary><div class="price-content"><dl><div><dt>Haarkur</dt><dd>12 €</dd></div><div><dt>Intensivmaske</dt><dd>15 €</dd></div><div><dt>Rescue System</dt><dd>ab 45 €</dd></div><div><dt>Augenbrauen färben</dt><dd>12 €</dd></div><div><dt>Augenbrauen zupfen</dt><dd>15 €</dd></div><div><dt>Wimpern färben</dt><dd>15 €</dd></div></dl></div></details>
-      <details data-preview="./assets/looks/locken.webp"><summary><span class="service-number">05</span><span class="service-name">Waves & Texture</span><span class="service-plus" aria-hidden="true">＋</span></summary><div class="price-content"><dl><div><dt>Dauerwelle</dt><dd>ab 65 €</dd></div><div><dt>Papilottenwelle</dt><dd>ab 75 €</dd></div></dl></div></details>
-      <p class="refill"><b>NEWSHA Refill:</b> Leere Flasche mitbringen, wir füllen nach. <a href="https://www.newsha.de/shoppartner/13081" target="_blank" rel="noopener noreferrer">Onlineshop ↗</a></p>
-      <p class="price-source">Preise laut <a href="https://www.hair-lounge-104.de/preise/" target="_blank" rel="noopener noreferrer">Salon-Website</a>, Stand 26.10.2026.</p>
-    </div>
-  </div>
-  <div class="service-preview" aria-hidden="true"><img src="./assets/looks/bob.webp" alt="" width="900" height="1125" loading="lazy"></div>
-</section>
-
-<section class="salon section-pad" id="salon" aria-labelledby="salon-title">
-  <div class="section-kicker reveal"><span>03 / DER SALON</span></div>
-  <div class="salon-head">
-    <h2 class="reveal" id="salon-title">Dein Platz<br><em>zum Wohlfühlen.</em></h2>
-    <p class="reveal">Backstein, Spiegel mit Geschichte und ein Waschbereich mit Massage-Sesseln und Kamin. Seit 2008 kümmert sich unser Team hier um deinen Look.</p>
-  </div>
-  <div class="salon-media">
-    <figure class="salon-team"><div class="media reveal-clip"><img src="./assets/team.webp" alt="Das Team der Hair Lounge 104 im Salon" width="1600" height="1066" loading="lazy"></div><figcaption>Das Team</figcaption></figure>
-    <div class="salon-loops">
-      <figure><div class="media arch reveal-clip" style="--d:80ms"><video class="loop" muted loop playsinline preload="none" poster="./assets/salon/kamin.webp" data-src="./assets/loops/kamin.mp4" aria-label="Waschbereich mit Kamin und Ledersesseln, das Feuer flackert"></video></div><figcaption>Kamin</figcaption></figure>
-      <figure><div class="media reveal-clip" style="--d:160ms"><video class="loop" muted loop playsinline preload="none" poster="./assets/salon/bar.webp" data-src="./assets/loops/bar.mp4" aria-label="Empfangstheke mit Barhockern, Backsteinwand und Lilien"></video></div><figcaption>Empfang</figcaption></figure>
-      <figure><div class="media reveal-clip" style="--d:240ms"><video class="loop" muted loop playsinline preload="none" poster="./assets/salon/kerzen.webp" data-src="./assets/loops/kerzen.mp4" aria-label="Zwei brennende Kerzen vor der Backsteinwand"></video></div><figcaption>Details</figcaption></figure>
-    </div>
-  </div>
-  <p class="loop-note">Kamin, Empfang und Kerzen: echte Salonfotos, mit Higgsfield dezent animiert.</p>
-</section>
-
-<section class="contact section-pad" id="kontakt" aria-labelledby="contact-title">
-  <div class="section-kicker reveal"><span>04 / KONTAKT</span></div>
-  <div class="contact-heading">
-    <h2 id="contact-title" class="split-title reveal-lines"><span class="line"><span>Zeit für <em>dich.</em></span></span></h2>
-    <a class="contact-circle magnetic" href="tel:+492345798529" aria-label="Salon anrufen: 0234 5798529"><span aria-hidden="true">↗</span></a>
-  </div>
-  <div class="contact-grid reveal">
-    <div class="contact-primary">
-      <a class="phone" href="tel:+492345798529">0234 5798529</a>
-      <p class="open-status" hidden><span class="status-dot" aria-hidden="true"></span><span class="status-text"></span></p>
-      <a class="text-link" href="mailto:info@hair-lounge-104.de">info@hair-lounge-104.de ↗</a>
-    </div>
-    <div>
-      <address>Karl-Friedrich-Straße 104<br>44795 Bochum</address>
-      <a class="text-link" href="https://www.google.com/maps/search/?api=1&query=Hair+Lounge+104+Karl-Friedrich-Stra%C3%9Fe+104+44795+Bochum" target="_blank" rel="noopener noreferrer">Route planen ↗</a>
-    </div>
-    <dl class="hours">
-      <div data-days="2,3,4,5"><dt>Di – Fr</dt><dd>09 – 18 Uhr</dd></div>
-      <div data-days="6"><dt>Samstag</dt><dd>08:30 – 15 Uhr</dd></div>
-      <div data-days="0,1"><dt>So & Mo</dt><dd>geschlossen</dd></div>
-    </dl>
-  </div>
-</section>
 </main>
-
-<footer class="footer">
-  <div class="footer-top"><a href="#home" class="footer-wordmark"><span>Hair Lounge <em>104</em></span></a><a class="back-top" href="#home">Nach oben ↑</a></div>
-  <div class="footer-bottom">
-    <div><a href="https://www.instagram.com/hairlounge104/?hl=de" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://www.facebook.com/hairlounge104/?locale=de_DE" target="_blank" rel="noopener noreferrer">Facebook ↗</a><a href="https://www.hair-lounge-104.de/impressum/" target="_blank" rel="noopener noreferrer">Salon-Impressum ↗</a><a href="#entwurf">Hinweise zum Entwurf</a><a href="#datenschutz">Datenschutz</a></div>
-    <span>Design by <a href="https://makesimpleit.de" target="_blank" rel="noopener noreferrer">MakeSimpleIT ↗</a></span>
-  </div>
-  <details class="draft-info" id="entwurf"><summary>Über diese Designvorschau</summary><p>Unabhängiger Website-Entwurf von MakeSimpleIT für Hair Lounge 104. Dies ist eine Vorschau und nicht die offizielle Website des Salons. Anruf-, E-Mail-, Shop- und Social-Media-Links führen zu den echten Angeboten des Salons.</p><p>Alle Fotos sind echte Aufnahmen der Hair Lounge 104: Logo und Teamfoto von <a href="https://www.hair-lounge-104.de/">hair-lounge-104.de</a>, Looks und Salonbilder vom Instagram-Profil <a href="https://www.instagram.com/hairlounge104/">@hairlounge104</a>. Die Looks zeigen bewusst keine Gesichter. Einzelne Fotos wurden mit Higgsfield hochskaliert; Kamin, Empfang und Kerzen sind echte Fotos, die mit Higgsfield dezent animiert wurden. Texte sind Gestaltungsvorschläge; Leistungen, Preise, Kontaktdaten und Salon-Angebote stammen von der offiziellen Website und dem Instagram-Profil, abgerufen am 26.10.2026. Der Öffnungsstatus folgt den regulären Öffnungszeiten, ohne Feiertage und Urlaub.</p></details>
-  <details class="draft-info" id="datenschutz"><summary>Datenschutz dieser Vorschau</summary><p>Diese statische Vorschau verwendet keine Analysewerkzeuge, Formulare oder eingebetteten Social-Media-Dienste. Bilder, Videos und Schriften werden lokal mit der Seite ausgeliefert. Beim Aufruf verarbeitet der Hostinganbieter GitHub technische Zugriffsdaten. Informationen dazu findest du in der <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von GitHub</a>. Externe Angebote werden erst über die jeweiligen Links geöffnet. Kontakt zum Ersteller: <a href="mailto:info@makesimpleit.de">info@makesimpleit.de</a>.</p></details>
-</footer>
+<footer>Unabhängige Vorschau, nicht die offizielle Website des Salons · <a href="https://www.hair-lounge-104.de/" target="_blank" rel="noopener noreferrer">hair-lounge-104.de ↗</a></footer>
 </body>
 </html>
